@@ -19,8 +19,20 @@ app.get("/phaser.min.js", function(req, res) {
     res.sendFile(__dirname + "/phaser.min.js");
 });
 
-app.get("/main.js", function(req, res) {
-    res.sendFile(__dirname + "/main.js");
+app.get("/game.js", function(req, res) {
+    res.sendFile(__dirname + "/game.js");
+});
+
+app.get("/play.js", function(req, res) {
+    res.sendFile(__dirname + "/play.js");
+});
+
+app.get("/menu.js", function(req, res) {
+    res.sendFile(__dirname + "/menu.js");
+});
+
+app.get("/load.js", function(req, res) {
+    res.sendFile(__dirname + "/load.js");
 });
 
 app.get("/assets/bird.png", function(req, res) {
@@ -29,6 +41,10 @@ app.get("/assets/bird.png", function(req, res) {
 
 app.get("/assets/pipe.png", function(req, res) {
     res.sendFile(__dirname + "/assets/pipe.png");
+});
+
+app.get("/assets/jump.wav", function(req, res) {
+    res.sendFile(__dirname + "/assets/jump.wav");
 });
 
 app.listen(app.get("port"), function() {
